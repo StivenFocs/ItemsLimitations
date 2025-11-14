@@ -37,8 +37,7 @@ public class Commands implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&m----------------------------"));
                 } else {
                     if (args[0].equalsIgnoreCase("reload")) {
-                        main.checkConfig();
-                        main.reloadConfig();
+                        main.reload();
                         sendString("messages.reload");
                         return true;
                     }

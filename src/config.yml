@@ -1,5 +1,5 @@
 #Made by StivenFocs - @isStiven on Telegram
-notifyupdate:
+
 messages:
   invalidsubcommand: "&c* &7This subcommand isn't registered."
   reload: "&a* &7Config reloaded successfully"

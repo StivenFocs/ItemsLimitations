@@ -6,27 +6,23 @@ import java.io.File;
 
 public class Main extends JavaPlugin {
 
-    private static Main instance;
+    private static Main plugin;
     public static Main getMain() {
-        return instance;
+        return plugin;
     }
 
     public void onEnable() {
-        instance = this;
+        plugin = this;
 
         getCommand("itemslimitations").setExecutor(new Commands());
         Bukkit.getPluginManager().registerEvents(new Events(), this);
-        checkConfig();
+        reload();
     }
 
-    public void checkConfig() {
-        File config = new File(getDataFolder() + File.pathSeparator + "config.yml");
-        if (config.exists()) {
-            saveConfig();
-        } else {
-            saveDefaultConfig();
-        }
+    public void reload() {
         reloadConfig();
+
+
     }
 
 }
